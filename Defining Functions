@@ -17,3 +17,45 @@ def spiral():
          t.forward(n)
          t.right(20
 spiral()
+
+def spiral(sides, turn, color, width):
+    t = turtle.Turtle()
+    t.color(color)
+    t.width(width)
+    for n in range(sides):
+        t.forward(n)
+        t.right(turn)
+
+spiral(100, 45, "yellow", 5)
+
+DRAW MULTIPLE SQUARES:
+#Focus on the variable/parameter "length".
+
+import turtle
+jack = turtle.Turtle()
+jack.color("yellow")
+    
+def draw_square(length):
+    for side in range(4):
+        jack.forward(length)
+        jack.right(90)
+
+draw_square(100)
+draw_square(50)
+draw_square(25)
+
+DRAW MULTI-COLOR MULTI SQUARES:
+#Important to consider adding a parameter requres adding an additional call for it to work properly.  We added "color" here.
+import turtle
+jack = turtle.Turtle()
+jack.color("yellow")
+    
+def draw_square(length, color):
+    for side in range(4):
+        jack.forward(length)
+        jack.color(color)
+        jack.right(90)
+
+draw_square(100, "blue")
+draw_square(50, "red")
+draw_square(25, "white")
