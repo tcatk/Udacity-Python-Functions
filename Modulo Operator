@@ -1,1 +1,49 @@
+#the modulo operator, %, divides one number by another—and then gives the remainder of that division.
+
+#Once we have divided 7 up into as many groups of 3 as possible, what is remaining?
+In this case, 1 is left over. We cannot evenly divide 1 into any more groups of 3. So 1 is the remainder. Thus, the expression 7 % 3 will evaluate to the result 1.
+
+#* 1 % 5 = 1: Well, we can't divide 1 up into any groups of 5. So we have 0 groups of five, with that original 1 left over (the remainder is 1).
+
+for n in range(12):
+   if n % 3 == 0:
+      draw_triangle()
+   else:
+      draw_square()
+
+This loop will run 12 times. When n is 0, 3, 6, or 9, the result will be 0. And that means the draw_triangle function will be called. When n is 1, 2, 4, 5, 7, 8, 10, or 11, the draw_square function will be called.
+
+In other words, this is the same as (but much shorter than) the other code.
+
+ALTERNATING COLOR BEADS:
+# This program draws a string of beads.
+# Change it so that the beads' colors
+# alternate:  red, blue, red, blue ...
+
+import turtle
+
+def bead(tur):
+    tur.right(75)
+    for _ in range(12):
+        tur.forward(10)
+        tur.left(30)
+    tur.left(75)
+
+t = turtle.Turtle()
+t.speed(0)
+t.width(2)
+
+# Move to the left before starting.
+t.penup()
+t.back(200)
+t.pendown()
+
+# Draw ten beads.
+for n in range(10):
+    if n % 2 == 1:
+        t.color("blue")
+    else:
+        t.color("red")
+    bead(t)
+    t.forward(40)
 
