@@ -27,3 +27,25 @@ if romeo_last_name == "montague":
         juliet.forward(1)
         juliet.right(1)
     juliet.hideturtle()
+
+IF - ELSE EXAMPLE:
+jack.color("yellow")
+for side in range(4):
+    if side == 1:
+        jack.color("blue")
+    if side == 2:
+        jack.color("yellow")
+    jack.forward(100)
+    jack.right(90)
+
+In the above code, we start out by setting the color to "yellow", and then later set it to "blue"—and then set it back to "yellow" again! That seems inefficient, to have to change the color to yellow twice.
+
+There's a different way we can do this, using an if / else structure:
+
+for side in range(4):
+    if side == 1:
+        jack.color("blue")
+    else:
+        jack.color("yellow")
+    jack.forward(100)
+    jack.right(90)
