@@ -47,3 +47,49 @@ for n in range(10):
     bead(t)
     t.forward(40)
 
+STAIRCASE PATTERN:
+
+# Write code to draw the staircase
+# pattern above.  The modulo operation
+# might be useful!
+
+import turtle
+donatello = turtle.Turtle()
+donatello.color("purple")
+donatello.speed(5)
+donatello.width(5)
+  
+def ninja_kick():
+    donatello.forward(70)
+    
+for n in range(12):
+    if n % 3 == 0:
+        ninja_kick()
+    elif n % 3 == 1:
+        donatello.left(90)
+        ninja_kick()
+    else:
+        donatello.right(90)
+
+ANSWER:
+# Write code to draw the staircase
+# pattern above.  The modulo operation
+# might be useful!
+
+import turtle
+donatello = turtle.Turtle()
+donatello.color("purple")
+donatello.speed(5)
+donatello.width(5)
+  
+def ninja_kick():
+    donatello.forward(70)
+    
+for n in range(12):
+    if n % 3 == 0:
+        ninja_kick()
+    elif n % 3 == 1:
+        donatello.left(90)
+        ninja_kick()
+    else:
+        donatello.right(90)
