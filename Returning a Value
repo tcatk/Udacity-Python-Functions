@@ -1,1 +1,56 @@
 
+
+
+TIMES TEN CALCULATION
+import turtle
+def times_ten(number):
+  return number * 10
+
+emily = turtle.Turtle()
+distane = times_ten(5)
+emily.forward(distance)
+
+When we say that it "returns the number 10" what we mean is this: This code works the same as if the function call, simple_function(), were replaced by the number 10.
+
+In other words, this ...
+
+distance = simple_function()
+
+... is equivalent to this:
+
+distance = 10
+
+So a return statement takes a value and returns it back to the place from which the function was called.
+
+WEIRD SHAPE:
+
+import turtle
+t = turtle.Turtle()
+t.color("white")
+t.width(1)
+t.speed(0)
+t.hideturtle()
+
+def square(number):
+    return number * number
+
+for n in range(540):
+    angle = square(n)
+    t.right(angle + .5)
+    t.forward(5)
+
+RETURNING A TURTLE:
+
+import turtle
+
+def super_reptile():
+    leonardo = turtle.Turtle()
+    leonardo.color("blue")
+    leonardo.width(20)
+    return leonardo
+
+clark = super_reptile()
+clark.forward(100)
+clark.left(45)
+clark.forward(100)
+# up, up, and away!
