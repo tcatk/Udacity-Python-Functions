@@ -1,0 +1,35 @@
+Random.randint (a random integer)
+
+def die_roll():
+  return random.randint(1, 6)
+
+
+Random.Choice
+
+color = random.choice(["red", "green", "blue")]
+
+cards = ["ace", 2, 3, 4, 5, 6, 7, 8, 9, "jack", "queen", "king"]
+my_card = random.choice(cards)    
+
+
+RANDOM RAINBOW SNAKE:
+import turtle
+import random
+
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+t = turtle.Turtle()
+t.width(20)
+
+for step in range(100):
+    # Change this to use a random number.
+    angle = random.randint(-90, 90)
+    forward = random.randint(10, 50)
+    
+  # Change this to use a random color.
+    color = random.choice(colors)
+
+    t.color(color)
+    t.right(angle)
+    t.forward(forward)
+                      
