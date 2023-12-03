@@ -1,1 +1,16 @@
+WHILE LOOPS - Repeats a section of code for as long as something is true
 
+PASSWORD
+>>> password = ''
+>>> while password != 'fizzbuzz':
+...     password = input('Please enter the password: ')
+...
+
+
+ROCKET LAUNCH
+
+n = 10
+    while n > 1:
+        print(n)
+        n -= 1
+    print("Blast OFF!")
