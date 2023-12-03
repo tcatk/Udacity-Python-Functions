@@ -20,3 +20,12 @@ while True:
         print("You told me that word already!")
         break
     words.append(word)
+
+NESTED LOOP BREAK - Will print "Help..." then "Yay, I broke out"
+while True:
+    while True:
+        print("I'm trapped in an infinite loop!")
+        break
+    break
+
+print("Yay, I broke out!")
