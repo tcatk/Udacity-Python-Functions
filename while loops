@@ -9,8 +9,11 @@ PASSWORD
 
 ROCKET LAUNCH
 
+import time
+
 n = 10
-    while n > 1:
-        print(n)
-        n -= 1
-    print("Blast OFF!")
+while n > 0:
+    print(n)
+    time.sleep(1)
+    n -= 1
+print("Blastoff!")
