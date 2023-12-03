@@ -34,3 +34,36 @@ index = 0
 while index < len(word):
     print (word[index])
     index += 1
+
+
+FOR LOOP COUNTING CHARACTERS
+def count_character(string, target):
+    total = 0
+    for ch in string:
+        if ch == target:
+            total += 1
+    return total
+
+# This should return 3, since there are three "o"s:
+print(count_character("bonobo", "o"))
+
+WHILE LOOP COUNTING CHARACTER
+
+def count_character(string, target):
+    index = 0
+    total = 0
+    while index < len(string):
+        if string[index] == target:
+            total += 1
+        index += 1
+    return total
+
+PRINTING CHARACTERS UNTIL a PERIOD:
+
+# Write your function here:
+def until_dot(string):
+  string = "I have no clue what I am doing here!  I wish it were more captivating.  Please let me get through this!"
+  index = 0
+  while index < len(s) and s[index] != ".":
+     index += 1
+  return(s[:index])
