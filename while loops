@@ -17,3 +17,20 @@ while n > 0:
     time.sleep(1)
     n -= 1
 print("Blastoff!")
+
+
+ABRACADABRA 2
+
+s = "abracadabra"
+
+index = len(s)
+while index > 0:
+    print(s[:index])
+    index -= 1
+
+PRINT CAT
+word = "cat"
+index = 0
+while index < len(word):
+    print (word[index])
+    index += 1
