@@ -1,0 +1,16 @@
+Search for Substring: Pull "ook" out of "Cookbook"
+
+>> location = 5
+>>> size = 3
+>>> word[location : location+size]
+ook
+
+Search for an substring within a string with INDEXes
+>>> string = 'waffles'
+>>> substring = 'ff'
+>>> string[0 : 0 + len(substring)] == substring
+False
+>>> string[1 : 1 + len(substring)] == substring
+False
+>>> string[2 : 2 + len(substring)] == substring
+True
