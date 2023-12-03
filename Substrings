@@ -14,3 +14,51 @@ False
 False
 >>> string[2 : 2 + len(substring)] == substring
 True
+
+STRINGS AND LISTS WITH LOOPS
+
+def is_string(substring, string):
+  index = 0
+  While index < len(string):
+   f string[index : index + len(substring)] == substring:
+            return True
+        index += 1
+    return False
+
+COUNT SUBSTRINGS
+
+def count_substring(string, target):
+    index = 0
+    total = 0
+    while index < len(string):
+        if string[index: index + len(target)] == target:
+            total += 1
+        index += 1
+    return total
+
+# Here's a call you can test it with. This should print 4:
+print(count_substring('love, love, love, all you need is love', 'love'))
+
+COUNTS SUBSTRINGS WHILE FILTERING OVERLAPPING MATCHES
+def count_substring(string, target):
+    total = 0
+    index = 0
+    while index < len(string):
+        if string[index : index + len(target)] == target:
+            total += 1
+            index += len(target)   # <- This is the key line
+        else:
+            index += 1
+    return total
+
+LOCATE ALL!!
+def locate_all(string, sub):
+    matches = []
+    index = 0
+    while index < len(string):
+        if string[index : index + len(sub)] == sub:
+            matches.append(index)
+            index += len(sub)
+        else:
+            index += 1
+    return matches
