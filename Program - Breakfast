@@ -1,9 +1,22 @@
 
 
+Key objectives:
+    Get input and use it to determine what happens next
+    Handle bad input without crashing
+    Be flexible with the input the user can enter
+    Print messages to the console, with a short pause after each one
+    Allow the player to order again if they like
 
-n = input("Please Place your order. \n"
-          "Would you like waffles or pancakes? \n")
-if n == "waffles":
-    print("Waffles it is! \n")
-if n == "pancakes":
-    print("Pancakes it is! \n")
+
+while True:
+    response = input("Please place your order. Would you like waffles or pancakes?\n").lower()
+    if "waffles" in response:
+        print("Waffles it is!")
+        break
+    elif "pancakes" in response:
+        print("Pancakes it is!")
+        break
+    else:
+        print("Sorry, I don't understand.")
+
+
