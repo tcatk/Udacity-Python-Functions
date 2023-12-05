@@ -8,6 +8,11 @@ Key objectives:
     Allow the player to order again if they like
 
 
+intro = "Hello! I am Bob, the Breakfast Bot. \n"
+"Today we have two breakfasts available \n"
+"The first is waffles with strawberries and whipped cream \n"
+"The second is sweet potato pancakes with butter and syrup \n"
+print(intro)
 while True:
     response = input("Please place your order. Would you like waffles or pancakes?\n").lower()
     if "waffles" in response:
@@ -19,4 +24,5 @@ while True:
     else:
         print("Sorry, I don't understand.")
 
-
+ack = "Your order will be ready shortly."
+print(ack)
