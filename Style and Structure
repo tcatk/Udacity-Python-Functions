@@ -1,0 +1,9 @@
+Pycodestyle: used to check code against common style criteria for Python.
+
+For such reasons, the Python style guide recommends keeping all lines of code to a maximum of 79 characters in length—or even 72 characters, in some cases.
+
+Again, this works because Python does implicit line continuation with anything inside parentheses, brackets, or braces.
+
+Going forward, we'll sometimes need to be printing a lot of very long strings—so this will be our go-to way of handling that.
+
+This may all seem a bit odd, and we'd agree—it is a little weird to have to give so much thought to something as simple as how to get a sentence split across multiple lines. But it'll be important if we want to keep our code from getting horribly messy and impossible to read!
