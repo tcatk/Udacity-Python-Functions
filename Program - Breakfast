@@ -1,0 +1,9 @@
+
+
+
+n = input("Please Place your order. \n"
+          "Would you like waffles or pancakes? \n")
+if n == "waffles":
+    print("Waffles it is! \n")
+if n == "pancakes":
+    print("Pancakes it is! \n")
