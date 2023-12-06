@@ -6,6 +6,7 @@ Key objectives:
     Be flexible with the input the user can enter
     Print messages to the console, with a short pause after each one
     Allow the player to order again if they like
+Key idea: When defining a function, it should have one purpose. A single function should generally not do multiple unrelated things.
 
 
 intro = "Hello! I am Bob, the Breakfast Bot. \n"
