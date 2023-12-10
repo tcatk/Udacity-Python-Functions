@@ -1,0 +1,60 @@
+# You can use this workspace to write and submit your adventure game project.
+import time
+
+items = []
+
+def print_pause(message_to_print):
+    print(message_to_print)
+    time.sleep(1)
+
+
+def intro():
+    print_pause("Welcome to the Adventure Game!")
+    print_pause("While travelling on a well-deserved vacation cruise,")
+    print_pause("JAWS attacked and sank your ship!")
+    print_pause("You managed to survive and rafted to a nearby deserted island.")
+    print_pause("You can choose to walk in different directions to find a way to escape.)
+                
+                
+def which_direction():
+                
+                
+                
+def play_again():
+    print_pause("GAME OVER."\n)
+    print_pause("Would you like to play again?")
+                
+                
+                
+    if "machete" in items:
+        print_pause("fortunately you have a machete!")
+        print_pause("You cut your way through to a clearing.")
+    else:
+        print_pause("You cannot proceed any further without a tool.")
+    which_direction()
+        
+def backward_JAWS()
+    print_pause("Oh no!  You walked into the ocean and...\n")
+               ("Were eaten by JAWS!!!\n")
+
+               
+def attacked_by_crabs()
+    print_pause("You walked into a dense canopy and...\n")
+               ("Attacked by Coconut Crabs!\n")
+    if "machete" in items:
+        print_pause("fortunately you have a machete!")
+        print_pause("You can choose to fight or run.")
+    else:
+        print_pause("You have no weapon and cannot defend yourself.\n")
+        print_pause("You have been killed by coconut crabs!\n)
+            play_again()            
+    which_direction()
+                
+                
+
+                
+                
+                
+                
+    
+                
