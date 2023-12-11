@@ -1,3 +1,259 @@
+#VERSION2
+
+# You can use this workspace to write and submit your adventure game project.
+import time
+import random
+
+def print_pause(message_to_print):
+    print(message_to_print)
+    time.sleep(1)
+
+fruit_list = ['mango', 'papaya', 'dragon_fruit', 'kiwi', 'banana'] 
+extinct_list = ['T-Rex', 'Titanaboa', 'Sabertooth Tiger']
+inventory = {fruit: fruit_list.count(fruit) for fruit in fruit_list}
+
+    
+def intro():
+    print_pause("Welcome to the Adventure Game!")
+    print_pause("While travelling on a well-deserved vacation cruise,")
+    print_pause("JAWS attacked and sank your ship!")
+    print_pause("You managed to survive by rafting to a nearby deserted island.")
+    print_pause("You are on the beach can choose to walk in different directions to find an escape.")
+    Beach_Start()
+             
+def take_fruit():
+    fruit = random.choice(fruit_list)               
+    print_pause("You walk upon some fruit trees")
+    if 'fruit' in items:
+        print_pause("You already have fruit")
+        choice = input("Do you 1. Take more fruit or 2. Move on?")
+        if choice == '1':
+                if inventory < 5:
+                    items.append('fruit')
+                else:
+                    print_pause("You cannot carry any more fruit")
+        elif choice == '2':
+            which_direction()
+        else:
+            print_pause("Please enter 1 or 2")   
+    elif 'machete' in items:
+        print_pause("fortunately you have a machete!")
+        print_pause("You are able to chop branches to get some fruit.")
+        print_pause("You now have fruit!")
+        items.append(fruit)
+    else:
+        print_pause("You have no tool to use for cutting down the fruit.")
+        print_pause("There is nothing more you can do here.")
+
+                    
+def eaten_by_JAWS():
+    print_pause("Oh no!  You walked into the ocean and...\n")
+    print_pause("Were eaten by JAWS!!!")
+    play_again()            
+
+               
+def attacked_by_crabs():
+    print_pause("You walked into a coconut grove and...\n")
+    ("Get atacked by Coconut Crabs!\n")
+    if 'machete' in items:
+        print_pause("fortunately you have a machete!")
+        choice = input("Do you: 1. run or 2. fight?")
+        if choice == '1':
+            print_pause("You outrun them easily and go back to the Fruit Trees.")
+            Fruit_Trees()
+        elif choice == '2':
+            print_pause("You draw your machete to dine on crab...")
+            print_pause("But you are overwhelmed and it's you on the menu!")
+            play_again()
+        else:
+            print_pause("You have no weapon and have been killed!")
+            play_again()            
+  
+                
+def cliff_block():
+    print_pause("This is a very scenic path...")
+    print_pause("Unfortunately it is blocked by cliffs.")
+    
+                    
+def Coconuts():
+    print_pause("The food you gave them was rotten and made them sick.")
+    ("The monkeys stone you to death with Coconuts!")
+    play_again()
+                       
+                       
+def Beach_Start():
+    print_pause("You start on the beach, and always face towards the far end of the island.")
+    which_direction()
+    if direction == '1':
+        Fruit_Trees()
+    elif direction == '2':
+        SOS_Rocks()
+    elif direction == '3':
+        Monkey_Tree()
+    elif direction == '4':
+        eaten_by_JAWS()
+                
+
+def SOS_Rocks():
+    print_pause("You find a large SOS made from rocks. /n")
+    print_pause("Someone else was here once. There is nothing else for you to do here. /n")
+    print_pause("Which way would you like to go now?")
+    which_direction()
+    if direction == '1':
+        Beach_Start()
+    elif direction == '2':
+        Skeleton()
+    elif direction == '3':
+        Extinct_Animal()
+    elif direction == '4':
+        eaten_by_JAWS()
+        
+                    
+def Fruit_Trees():
+    print_pause("You find a grove of fruit trees! /n")
+    take_fruit()
+    which_direction()
+    if direction == '1':
+        attacked_by_crabs()
+    elif direction == '2':
+        Beach_Start()
+    elif direction == '3':
+        Dense_Jungle()
+    elif direction == '4':
+        eaten_by_JAWS()
+                           
+                   
+def Dense_Jungle():
+    print_pause("You encounter a very thick canopy.")
+    if 'machete' in items:
+        print_pause("fortunately you have a machete!")
+        print_pause("You cut your way through to a clearing.")
+        giant_eagle()
+    else:
+        print_pause("You cannot proceed any further without a tool.\n"
+        " You go backward.")
+        Fruit_Trees()
+                    
+def Skeleton():
+    print_pause("You discover a Skeleton on the ground!")
+    print_pause("There is a machete laying nearby")
+    print_pause("You don't care what happened, you take the machete")
+    items.append('machete')
+    which_direction()
+    if direction == '1':
+        SOS_Rocks()
+    elif direction == '2':
+        cliff_block()
+    elif direction == '3':
+        Extinct_Animal()
+    elif direction == '4':
+        eaten_by_JAWS()    
+                
+def Extinct_Animal():
+    animal = random.choice(extinct_list)
+    Print_Pause(" You stumble upon an giant animal and are killed.")
+    play_again()
+                       
+def Monkey_Tree():
+    print_pause("You walk into trees filled with monkeys")
+    print_pause("Do you want to give them fruit and move forward?")
+    choice = input("Do you 1. Give fruit or 2. Move on?")
+    if choice == '1' and fruit in items:
+        items.remove('fruit')                       
+    else:
+        print_pause("You have no fruit to give")
+        which_direction()
+        if direction == '1':
+            Dense_Jungle()
+        elif direction == '2':
+              Extinct_Animal()
+        elif direction == '3':
+              print_pause("You cannot go that way, return to Beach.")
+              Beach_Start()
+        elif direction == '4':
+              Beach_Start()              
+                
+
+def Pirate():                        
+    print_pause("You run into a grizzled Pirate guarding a large treasure chest!")
+    print_pause("The Pirate shouts angrily, raises his sword and charges!")
+    choice = input("Do you 1. run or 2. fight?")
+    if choice == '1':
+        print_pause("You attempt to escape his wrath by running.")
+        print_pause("The Pirate closes in with his sword raised...")
+        print_pause("Suddenly, the Pirate trips, and falls on his sword!")
+        print_pause("The Pirate is dead, and the treasure is yours!!!")
+        items.append('$10 Million Treasure')
+    elif choice == '2':
+        print_pause("You draw your machete and engage in battle...")
+        random.randint(0, 1)
+        if random.randint == '0':
+            print_pause("The Pirate proves to be an expert swordsman...")
+            print_pause("You have been killed by the Pirate. YARRR!")
+            play_again()
+        else:
+            print_pause("After a very competitive duel...")
+            print_pause("You are exhausted and conceede defeat")
+            print_pause("The Pirate banishes you back to the beach!")
+            Beach_Start()
+    else:
+        print_pause("Please enter 1 or 2")
+              
+                       
+                       
+def giant_eagle():
+    print_pause("You manage to clear through the jungle and find a giant eagle!")
+    print_pause("The eagle is friendly and will fly you to New Zealand!")
+    if fruit is not in items:
+        print_pause("You had no fruit to sustain you during the long journey.")
+        print_pause("You die of starvation")
+        play_again()
+    elif fruit in items and $10 Million Treasure not in items
+        print_pause("You survived! Too bad you didn't find the treasure.")
+        print_pause("Congratulations and thank you for playing!")
+    else:
+        print_pause("You survived and live happily ever after!)
+        print_pause("Congratulations and thank you for playing!")
+     
+#If machete but no fruit: starve on flight
+#If machete and fruit: saved with no money
+#If machete, fruit & $10M, Win and live happily ever after with $10M treasure
+        
+def play_again():
+    print_pause("GAME OVER. Would you like to play again?")
+    answer = input("Enter yes or no: ")
+    if answer.lower() == "yes":
+        play_game()
+    elif answer.lower() == "no":
+        print("Thank you for playing!)
+    else: print("Please enter yes or no.")                    
+
+def which_direction():
+    print_pause("Please enter the number for the"
+    "direction you would like to go")
+    direction = input("1. left\n"
+                  "2. right\n"
+                  "3. forward\n"
+                  "4. backward\n")
+    while input not in directions:
+    print("Options: 1, 2, 3 or 4")
+       
+                   
+def play_game()
+    items = []
+    intro()
+
+
+
+
+
+
+
+
+
+
+
+
 # You can use this workspace to write and submit your adventure game project.
 import time
 
